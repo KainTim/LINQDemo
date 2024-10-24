@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQDemo", "LINQDemo\LINQDemo.csproj", "{216C4B50-9760-488B-A5E3-38DE83A96F7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonDbLib", "PersonDbLib\PersonDbLib.csproj", "{D3A94F8A-ED85-4DC0-AB6A-ACBCA7077287}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{216C4B50-9760-488B-A5E3-38DE83A96F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216C4B50-9760-488B-A5E3-38DE83A96F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216C4B50-9760-488B-A5E3-38DE83A96F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216C4B50-9760-488B-A5E3-38DE83A96F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A94F8A-ED85-4DC0-AB6A-ACBCA7077287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A94F8A-ED85-4DC0-AB6A-ACBCA7077287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A94F8A-ED85-4DC0-AB6A-ACBCA7077287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A94F8A-ED85-4DC0-AB6A-ACBCA7077287}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E1801B7-38CD-45E5-B715-DAED9FBBAB1A}
+	EndGlobalSection
+EndGlobal
