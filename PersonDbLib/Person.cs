@@ -10,5 +10,6 @@ public class Person
   public DateOnly Birthdate { get; set; }
   public int AdressId { get; set; }
   public Adress Adress { get; set; } = null!;
+  public string SearchFormat => $"{Lastname} {Firstname} [{Birthdate:dd.MM.yyyy}]";
   public override string ToString() => $"{Lastname} {Firstname} {Gender} {Birthdate:yyyy}";
 }
