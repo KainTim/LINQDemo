@@ -21,14 +21,20 @@ public partial class MainWindow : Window
 
   private void Window_Loaded(object sender, RoutedEventArgs e)
   {
-    var db = new PersonContext();
-    lstNames.ItemsSource = db.Persons
-      .Where(x => x.Gender == "Male")
-      .Where(x => x.Birthdate.Year <= DateTime.Now.AddYears(-30).Year)
-      .OrderBy(x => x.Lastname)
-      .ThenBy(x => x.Firstname)
-      .Select(x => $"{x.Lastname} {x.Birthdate}");
-    grdNames.ItemsSource = db.Persons
-      .Where(x=> x.Adress.Country=="Portugal");
+
   }
+
+  private void CboCountries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+  {
+  }
+
+  private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
+  {
+  }
+
+  private void SldMinLength_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+  {
+  }
+
+
 }
