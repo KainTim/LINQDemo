@@ -13,7 +13,10 @@ public class PersonContext
   {
     InitializePersons();
     InitializeAdresses();
+    InitializeNavigationProperties();
   }
+
+  private void InitializeNavigationProperties() => Persons.ForEach(x => x.Adress = Adresses.Single(y => y.Id == x.AdressId));
 
   private void InitializePersons()
   {
@@ -51,7 +54,7 @@ public class PersonContext
         Id = int.Parse(x[0]),
         Country = x[1],
         City = x[2],
-        PostalCode = int.Parse(x[3]),
+        PostalCode = int.TryParse(x[3], out int value) ? value : null,
         StreetName = x[4],
         StreetNumber = int.Parse(x[5]),
       }).ToList();

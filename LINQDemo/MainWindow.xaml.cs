@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using PersonDbLib;
+
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +21,14 @@ public partial class MainWindow : Window
 
   private void Window_Loaded(object sender, RoutedEventArgs e)
   {
-
+    var db = new PersonContext();
+    lstNames.ItemsSource = db.Persons
+      .Where(x => x.Gender == "Male")
+      .Where(x => x.Birthdate.Year <= DateTime.Now.AddYears(-30).Year)
+      .OrderBy(x => x.Lastname)
+      .ThenBy(x => x.Firstname)
+      .Select(x => $"{x.Lastname} {x.Birthdate}");
+    grdNames.ItemsSource = db.Persons
+      .Where(x=> x.Adress.Country=="Portugal");
   }
 }
